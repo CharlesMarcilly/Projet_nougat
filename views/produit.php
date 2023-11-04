@@ -1,6 +1,6 @@
 <?php
 // require "core/tools.php";
-require "core/rooter.php";
+// require "core/rooter.php";
 ?>
 <!DOCTYPE html>
 <html lang="fr">

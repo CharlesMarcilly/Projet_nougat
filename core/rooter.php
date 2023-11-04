@@ -15,7 +15,6 @@ function afficher($view){
     require "controllers/footer.php";
 }
 
-
 // FONCTION QUI AFFICHE LES PAGES SELON CE QUI EST ECRIT DANS L'URL
 if(isset($_GET["p"])){
     $p = $_GET["p"];
