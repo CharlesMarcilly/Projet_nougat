@@ -1,4 +1,3 @@
-    <div class="container">
         <div class="contact-form" style="text-align: center;">
             <h2 style="margin-bottom: 40px;">Contactez-nous</h2>
             <form action="traitement.php" method="post">
@@ -19,8 +18,7 @@
                     <textarea id="message" name="message" rows="2"></textarea>
                 </div><br><br>
 
-                    <input type="submit" style="text-align: center;" value="Envoyer">
-            </form>
-
+                    <input type="button" class="btn btn-danger" style="text-align: center;" value="Envoyer">
+            </form><br><hr>
         </div>
-    </div>
+
