@@ -19,6 +19,6 @@
                 </div><br><br>
 
                     <input type="button" class="btn btn-danger" style="text-align: center;" value="Envoyer">
-            </form><br><hr>
+            </form><br><br><hr>
         </div>
 

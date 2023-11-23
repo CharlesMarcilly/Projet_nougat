@@ -5,7 +5,7 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, quod. Accusantium cum dignissimos, nostrum sapiente error explicabo minus sed nemo tempora architecto, dolore veritatis natus assumenda nisi optio veniam quas.</p>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, quod. Accusantium cum dignissimos, nostrum sapiente error explicabo minus sed nemo tempora architecto, dolore veritatis natus assumenda nisi optio veniam quas.</p>
 
-<?php afficher('produit');?>    
+<?php afficher('produit');?>  
 
 
 <?php afficher('footer');?>    

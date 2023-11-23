@@ -9,11 +9,12 @@ try {
 } catch (PDOException $e) {
     echo "Erreur base de données"; 
     echo $e->getMessage();
+    var_dump($db);
 }
 
-function alldb($table) {
+function tout($table) {
     $db = $GLOBALS["db"];
-    $sql = "SELECT * FROM table";
+    $sql = "SELECT * FROM $table";
     $result = $db->query($sql);
     $list = $result->fetchAll(PDO::FETCH_ASSOC);
     return $list; 

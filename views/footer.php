@@ -1,39 +1,34 @@
    <footer id="footer">
-    <div class="container">
+    <div class="container-footer">
         <img src="" alt="">
         <div class="ligne">
             <div class="footer">
-                <h4>Nos produits</h4>
-                <?php foreach ($menufooter1 as $key => $lien) {?>
-                <a href="<?php echo $lien['url'] ?>" title="<?php echo $lien['titre'] ?>" class="menufooter1">
-                <?php echo $lien['text'] ?></a>
+                <h4>Catégories</h4>
+                <?php foreach ($categories as $key => $categorie) {?>
+                <ul><a href="#" title="<?php echo nomPropre($categorie['nom_categ'])?>" class="menufooter1"><li> 
+                <?php echo nomPropre($categorie['nom_categ'])?></li></a></ul>
             <?php } ?>
             </div>
 
             <div class="footer">
-                <h4>Qui sommes-nous ?</h4>
-                  <?php foreach ($menufooter2 as $key => $lien) {?>
-                <a href="<?php echo $lien['url'] ?>" title="<?php echo $lien['titre'] ?>" class="menufooter2">
-                <?php echo $lien['text'] ?></a>
-            <?php } ?>
-               
+                <h4>Nos engagements</h4>
+                   <ul><a href=""><li>SAV à votre disposition</li></a></ul>
+                   <ul><a href=""><li>Paiement sécurisé</li></a></ul>
+                   <ul><a href=""><li>Prix très attractifs</li></a></ul>
             </div>
-
             <div class="footer">
-                <h4>Liens importants</h4>
-                <?php foreach ($menufooter3 as $key => $lien) {?>
-                <a href="<?php echo $lien['url'] ?>" title="<?php echo $lien['titre'] ?>" class="menufooter2">
-                <?php echo $lien['text'] ?></a>
-            <?php } ?>
+                <h4>L'entreprise</h4>
+                <ul><a href="#"><li>Qui sommes nous ?</li></a></ul>
+                    <ul><a href="#"><li>Avis de nos clients</li></a></ul>
+                    <ul><a href="#"><li>Charte de confidentialité</li></a></ul>
+                    <ul><a href="#"><li>Conditions générales de vente</li></a></ul>
+                    <ul><a href="#"><li>Informations légales</li></a></ul>
+                </ul>
             </div>
-
-            <div class="footer">
-                <h4>Nos fournisseurs</h4>
-                <?php foreach ($menufooter4 as $key => $lien) {?>
-                <a href="<?php echo $lien['url'] ?>" title="<?php echo $lien['titre'] ?>" class="menufooter2">
-                <?php echo $lien['text'] ?></a>
-            <?php } ?>
-            </div>
+            <!-- <div class="footer">
+                <h4>Partenariat</h4>
+                <ul><li><a href="#" id="partenariat"><p>Confiserie Le Maître Gourmet</p></a></li></ul>
+            </div> -->
         </div>
     </div>
 

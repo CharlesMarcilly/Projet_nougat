@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  margin: 20px;
+  margin: 0;
 }
 
 /* HEADER */
@@ -58,13 +58,86 @@ img {
 }
 
 /* CARTES PRODUITIS */
+#titre_produit {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .allCards {
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
 
 /* FOOTER */
 body > footer {
   position: relative;
   bottom: 0;
+}
+
+.ligne {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* .ligne li:hover {
+  font-size: 19px;
+  transition: 0.2s;
+  color: blueviolet;
+  text-decoration: none;
+  text-decoration: blueviolet;
+  text-decoration: underline blueviolet;
+  text-underline-offset: 5px;
+} */
+
+.footer,
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer,
+ul {
+  margin-left: -14.5px;
+}
+
+.footer a:hover {
+  font-size: 17px;
+  transition: 0.2s;
+  color: blueviolet;
+  text-decoration: none;
+  text-decoration: blueviolet;
+  text-decoration: underline blueviolet;
+  text-underline-offset: 5px;
+}
+
+.footer,
+h4 {
+  margin-bottom: 25px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+/* #ul_entreprise a li:hover {
+  font-size: 17px;
+  transition: 0.2s;
+  color: blueviolet;
+  text-decoration: none;
+  text-decoration: blueviolet;
+  text-decoration: underline blueviolet;
+  text-underline-offset: 5px;
+}
+#partenariat a:hover {
+  font-size: 17px;
+  transition: 0.2s;
+  color: blueviolet;
+  text-decoration: blueviolet;
+  text-decoration: underline blueviolet;
+  text-underline-offset: 5px;
+} */
+
+.container-footer {
+  background-color: black;
+  color: white;
 }
