@@ -15,7 +15,8 @@
                    <ul><a href=""><li>SAV à votre disposition</li></a></ul>
                    <ul><a href=""><li>Paiement sécurisé</li></a></ul>
                    <ul><a href=""><li>Prix très attractifs</li></a></ul>
-            </div>
+            </div> 
+            
             <div class="footer">
                 <h4>L'entreprise</h4>
                 <ul><a href="#"><li>Qui sommes nous ?</li></a></ul>

@@ -7,7 +7,7 @@ $menuheader = [
         "url" => "./"
     ],
     [
-        "text" => "Produit",
+        "text" => "Produits",
         "titre" => "Le produit",
         "url" => "./?p=produit"
     ],
