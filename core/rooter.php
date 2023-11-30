@@ -30,9 +30,6 @@ switch ($p) {
     case "produit":
         require "controllers/page_produits.php";
     break;
-    case "produit":
-        require "controllers/page_produits.php";
-    break;
     case "actualite":
         require "controllers/page_actualites.php";
     break;

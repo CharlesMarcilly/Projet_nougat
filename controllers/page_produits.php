@@ -34,7 +34,6 @@
     }
 
     require "views/page_produits.php";
-
     } else {
         require "controllers/page_404.php";
     }

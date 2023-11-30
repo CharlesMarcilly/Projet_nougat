@@ -10,7 +10,7 @@
             <p>Du nougat traditionnel, du nougat au M&M'S, nous vous proposons une grande variété de produit</p>
         </div><br><hr><br>
 
-        <h1 id="titre_produit">Page produits</h1>
+        <h1 id="titre_produit">Nos meilleurs produits, rien que pour vous</h1>
         <div class="allCards">
             <div class="card" style="width: 18rem;">
 

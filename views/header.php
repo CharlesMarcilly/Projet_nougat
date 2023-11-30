@@ -6,7 +6,7 @@
 
                     <?php foreach ($menuheader as $key => $lien) {?>
                     <a href="<?php echo $lien["url"] ?>" title="<?php echo $lien["titre"] ?>" class="menu">
-                    <?php echo $lien["text"] ?></a>
+                    <?php echo $lien["text"] ?></a> 
                     <?php } ?>
             </div>  
         </div>

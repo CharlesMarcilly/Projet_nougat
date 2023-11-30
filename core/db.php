@@ -38,6 +38,19 @@ function specifique($table, $nomCol, $val, $op = "="){
 }
 
 
+// Fonction presque similaire à specifique, avec un 'like' et %$val%. Ce qui permet de 
+// récuperer la valeur, et de chercher tous les textes qui auront des caractères avant et après la valeur $val
+function sqlLike($table, $nomCol, $val){
+    $db = $GLOBALS['db'];
+    $sql = "SELECT * 
+            FROM $table 
+            WHERE $nomCol like :$nomCol";
+    $result = $db->prepare($sql); 
+    $result->execute([":$nomCol" => "%$val%"]);
+    return $result->fetchALL(PDO::FETCH_ASSOC);
+}
+
+
 // Cette fonction permet d'afficher les produits d'une seule catégorie en passant en paramètre 
 /*la catégorie que l'on souhaite avoir*/
 // function produitsParCategorie($categorie) {
