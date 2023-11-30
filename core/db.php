@@ -14,6 +14,7 @@ try {
     var_dump($db);
 }
 
+
 // Fonction qui récupère tout d'une table de la base de données grâce à la requête sql. 
 // On récupère le tout sous forme de tableau (fetch_assoc)
 function tout($table) {
@@ -24,14 +25,50 @@ function tout($table) {
     return $list; 
 }
 
-// Fonction qui récupère des données selon la colonne de la table et son id.
-// Pour moi, l'id sera le nom de la catégorie
+// Fonction qui récupère des données selon la colonne de la table et sa valeur.
+// Pour moi, la valeur ($val) sera le nom de la catégorie
 function specifique($table, $nomCol, $val, $op = "="){
     $db = $GLOBALS['db'];
-    $sql = "select * from $table where $nomCol$op:$nomCol";
-    $result = $db->prepare($sql);
+    $sql = "SELECT * 
+            FROM $table 
+            WHERE $nomCol $op:$nomCol";
+    $result = $db->prepare($sql); /* Protection contre les injections SQL grâce au prepare */
     $result->execute([":$nomCol"=> $val]);
     return $result->fetchALL(PDO::FETCH_ASSOC);
 }
+
+
+// Cette fonction permet d'afficher les produits d'une seule catégorie en passant en paramètre 
+/*la catégorie que l'on souhaite avoir*/
+// function produitsParCategorie($categorie) {
+//     $db = $GLOBALS["db"];
+//     $sql = "SELECT produits.*, categories.nom_categ
+//             FROM produits
+//             JOIN categories ON produits.categorie_id = categories.id
+//             WHERE categories.nom_categ = :categorie";
+//     $result = $db->prepare($sql);
+//     $result->execute([':categorie' => $categorie]);
+//     return $result->fetchAll(PDO::FETCH_ASSOC);
+// }
+// $produitsTraditionnels = produitsParCategorie('traditionnel');
+
+
+
+// Cette fonction permet de récupérer toutes les produits avec ses catégories associés
+// function tousLesProduitsParCategorie() {
+//     $db  = $GLOBALS["db"];
+//     $sql = "SELECT produits.*, categories.nom_categ
+//             FROM produits
+//             JOIN categories ON produits.categorie_id = categories.id";
+//     $result = $db->query($sql);
+//     return $result->fetchAll(PDO::FETCH_ASSOC);
+// }
+// $tousLesProduits = tousLesProduitsParCategorie();
+
+// foreach ($tousLesProduits as $produit) {
+    //     echo "Catégorie : " . $produit['nom_categ'] . "<br>";
+    //     echo "Produit : " . $produit['nom_produit'] . ", Description : " . $produit['desc_produit'] . "<br>";
+    //     echo "<br>";
+    // }
 
 ?>

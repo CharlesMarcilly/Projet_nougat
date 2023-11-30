@@ -22,7 +22,7 @@ $menuheader = [
         "url" => "./?p=actualite"
     ],
     [
-        "text" => "Rechercher",
+        "text" => "Recherche",
         "titre" => "Rechercher un produit",
         "url" => "./?p=recherche"
     ],
