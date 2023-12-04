@@ -1,4 +1,10 @@
 <?php
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+} else {
+    $id = 0;
+}
 // $val = '1';
 
 if (isset($GLOBALS["produitsCats"])){
@@ -6,7 +12,6 @@ if (isset($GLOBALS["produitsCats"])){
 } else {
     $produits = tout("produits");
 }
-
 
 // $produits = specifique("produits", "categorie_id", $val);
 // var_dump($produits);
@@ -38,6 +43,10 @@ if (empty($imgProduit)) {
     $imgProduit = $produits["img_produit"];
 }
 
+// if(isset($GET['id']) && $$GET['id'] == $produit['id']){
+//     echo $produit['id'];
+// } else {
 
 require "views/produit.php";
+
 ?> 

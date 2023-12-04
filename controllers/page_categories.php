@@ -9,19 +9,23 @@ if (isset($_GET['id'])) {
 }
 
 // Fonction qui permet de récupérer des données spécifiques dans une table, selon le nom de la colonne, l'id etc...
-$categories = specifique("categories",/**A la condition que =>*/ "id", /**Soit égale à =>*/ $id );
+// $categories = tout("categories");
 
 
  /** Le if se ferme à la fin car si on rentre dans la boucle, il faut récupérer tout le code */
- if (!empty($categories)) {
-    $categorie  = $categories[0];
-    $idCateg    = $categorie["id"];
-    $nomCat     = $categorie["nom_categ"];
-    $descCat    = $categorie["desc_categorie"];
+//  if (!empty($categories)) {
+//     $categorie  = $categories[0];
+//     $idCateg    = $categorie["id"];
+//     $nomCat     = $categorie["nom_categ"];
+//     $descCat    = $categorie["desc_categorie"];
 
 
-    $produitsCats = specifique("produits", "categorie_id", $id);
-    
+    // $produitsCats = specifique("produits", "categorie_id", $id);
+
+    $tousprod_par_cats = tousLesProduitsParCategorie('');
+
+    if (isset($tousprod_par_cats)) {
+
     require "views/page_categories.php";
 } else {
     require "controllers/page_404.php";

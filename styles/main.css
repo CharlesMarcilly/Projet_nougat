@@ -59,13 +59,19 @@ img {
 
 /* CARTES PRODUITIS */
 #titre_produit {
+  text-align: center;
+}
+
+#titre_produit {
   margin-bottom: 50px;
 }
 
-.allCards {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+.card {
+  height: 530px;
+  margin-bottom: 40px;
+}
+.card img {
+  height: 260px;
 }
 
 /* FOOTER */
