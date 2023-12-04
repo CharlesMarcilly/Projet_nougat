@@ -1,7 +1,7 @@
 <?php afficher('header');
 ?>    <hr><br>
 
-<h1 style="text-align: center;">Nougats traditionnel </h1><br>
+
 
 <div class="container">
   <div class="row">
@@ -9,7 +9,8 @@
     <?php foreach ($tousprod_par_cats as $key => $produit){ 
       $lien = "?p=produit&id=".$produit['id'];
       ?>
-                <div class="col-md-6 col-lg-3 ">
+                <div class="col-md-2 col-lg-3 ">
+                  <h2 style="text-align: center;">Nougats <?php echo $produit['nom_categorie']?> </h1><br>
                   <div class="card" style="width: 18rem;">
                   
                     <img src="<?php echo $produit["img_produit"];?>" class="card-img-top" alt="photo du produit">

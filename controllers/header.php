@@ -30,6 +30,16 @@ $menuheader = [
         "text" => "Panier",
         "titre" => "Votre panier",
         "url" => "./?p=panier"
+    ],
+    [
+        "text" => "Inscription",
+        "titre" => "S'inscrire",
+        "url" => "./?p=inscription"
+    ],
+    [
+        "text" => "traitement",
+        "titre" => "S'inscrire",
+        "url" => "./?p=traitement"
     ]
 ];
 

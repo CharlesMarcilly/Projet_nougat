@@ -42,6 +42,12 @@ switch ($p) {
     case "recherche":
         require "controllers/page_recherche.php";
     break;
+    case "inscription":
+        require "controllers/page_inscription.php";
+    break;
+    case "traitement":
+        require "controllers/traitement.php";
+    break;
     default:
         require "controllers/page_404.php";
 
