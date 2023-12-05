@@ -11,7 +11,7 @@ try {
 } catch (PDOException $e) {
     echo "Erreur base de données"; 
     echo $e->getMessage();
-    var_dump($db);
+    // var_dump($db);
 }
 
 
@@ -83,5 +83,4 @@ $tousLesProduits = tousLesProduitsParCategorie();
 //         echo "Produit : " . $produit['nom_produit'] . ", Description : " . $produit['desc_produit'] . "<br>";
 //         echo "<br>";
 //     }
-
 ?>

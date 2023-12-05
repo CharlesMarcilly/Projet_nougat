@@ -1,6 +1,6 @@
         <div class="contact-form" style="text-align: center;">
             <h2 style="margin-bottom: 40px;">Contactez-nous</h2>
-            <form action="traitement.php" method="post">
+            <form action="#" method="post">
                 
                 <div class="name">
                     <label for="nom">Nom :</label>

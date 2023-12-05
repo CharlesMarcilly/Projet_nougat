@@ -37,10 +37,15 @@ $menuheader = [
         "url" => "./?p=inscription"
     ],
     [
-        "text" => "traitement",
-        "titre" => "S'inscrire",
-        "url" => "./?p=traitement"
+        "text" => "Connexion",
+        "titre" => "Se connecter",
+        "url" => "./?p=connexion"
     ]
+    // [
+    //     "text" => "traitement",
+    //     "titre" => "Traitement",
+    //     "url" => "./?p=traitement"
+    // ]
 ];
 
 
