@@ -1,8 +1,36 @@
- <?php afficher("header") ?><hr>
+<?php 
+// $title = "Inscription";
+
+// if (isset($_POST['ok'])){
+
+//     $nom       = $_POST['nom'];
+//     $prenom    = $_POST['prenom'];
+//     $mail      = $_POST['mail'];
+//     $mdp       = $_POST['password'];
+//     $cmdp      = $_POST['cpassword'];
+//     $adresse   = $_POST['adresse'];
+//     $tel       = $_POST['tel'];
+    
+//     $serverName = "localhost";
+//     $bdd = "nougat";
+//     $userName = "root";
+//     $password = ""; /*Vide sur wamp*/ 
+//     // Récupération de la base de donnée du site 
+//     try {
+//         $db = new PDO("mysql:host=$serverName;dbname=$bdd", $userName, $password);
+//         $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//     } catch (PDOException $e) {
+//         echo "Erreur base de données"; 
+//         echo $e->getMessage();
+//     }}
+?>
+
+ 
+ <?php afficher("header") ?><hr><br>
 
     <div class="container col-md-6 bg-dark-subtle">
         <h1 class="text-center">Inscription</h1> 
-        <form action="./controllers/page_connexion.php" method="post">
+        <form action="" method="post">
             
             <div class="row">
                 <div class="col-md-6">
@@ -67,7 +95,7 @@
             S'inscrire !
             </button> 
         </form> 
-    </div>
+    </div><br>
 
     
 

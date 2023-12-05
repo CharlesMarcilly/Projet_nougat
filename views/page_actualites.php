@@ -8,5 +8,5 @@
 <?php afficher('produit');?>    
 
 
-<?php afficher('footer');?>    
+
 

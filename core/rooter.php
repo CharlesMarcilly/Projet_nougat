@@ -22,6 +22,7 @@ if(isset($_GET["p"])){
     $p = "";
 }
 
+// Mise en mémoire tampon
 ob_start();
 switch ($p) {
     case "":

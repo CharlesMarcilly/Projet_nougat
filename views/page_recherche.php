@@ -1,4 +1,4 @@
-<?php afficher("header"); ?>
+<?php afficher("header"); ?><hr><br>
 
 
     <div id="titre_recherche">
@@ -19,4 +19,4 @@
     
 <?php afficher("produit"); ?>
 
-<?php afficher("footer"); ?>
+

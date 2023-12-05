@@ -1,6 +1,6 @@
-<?php afficher("header") ?><br>
+<?php afficher("header") ?><hr><br>
     
-    <h1>404 ERROR</h1>
+    <h1 style="text-align: center;">404 ERROR</h1><br>
   
 <?php afficher("footer") ?>
   

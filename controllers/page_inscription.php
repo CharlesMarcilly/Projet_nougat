@@ -1,28 +1,19 @@
 <?php 
-$title = "Inscription";
 
-if (isset($_POST['ok'])){
+if(isset($_POST['ok'])){
 
     $nom       = $_POST['nom'];
     $prenom    = $_POST['prenom'];
     $mail      = $_POST['mail'];
+    if ($_POST['mail'] != filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
+        exit("Adresse mail incorrect");    
+        
+        
+    } else 
     $mdp       = $_POST['password'];
     $cmdp      = $_POST['cpassword'];
     $adresse   = $_POST['adresse'];
     $tel       = $_POST['tel'];
-    
-    $serverName = "localhost";
-    $bdd = "nougat";
-    $userName = "root";
-    $password = ""; /*Vide sur wamp*/ 
-    // Récupération de la base de donnée du site 
-    try {
-        $db = new PDO("mysql:host=$serverName;dbname=$bdd", $userName, $password);
-        $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        echo "Erreur base de données"; 
-        echo $e->getMessage();
-    }
 
 //   On dit que si le $_POST['ok'] (du name="ok") existe, on récupère les données en les mettants dans des variables. Ensuite on récupère la 
 //   base de données pour créer une nouvelle requête SQL, qui va insérer les données récupérées dans notre base de données
@@ -40,9 +31,15 @@ if (isset($_POST['ok'])){
         )
     );
     $reponse = $requete->fetchALL(PDO::FETCH_ASSOC);
-    
-    header("location: controllers/page_connexion.php");
-} else{
-   require "views/page_inscription.php";
+
+    echo "<span style='color:green;text-align:center;'>Votre inscription est validée !";
+    require "controllers/page_connexion.php";
+
+} else {
+
+    require "views/page_inscription.php";
 }
+
+       
+
 ?>

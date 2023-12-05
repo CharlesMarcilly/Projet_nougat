@@ -16,7 +16,7 @@
                 <?php foreach($produitsTraditionnels as $key => $produitsTraditionnel){
                     $lien = "?p=produit&id=".$produitsTraditionnel['id'];
                     ?>
-                    <div class="col-md-6 col-lg-3 ">
+                    <div class="col-md-6 col-lg-3">
                         <div class="card" style="width: 18rem;">
                             <img src="<?php echo $produitsTraditionnel['img_produit'] ?>" class="card-img-top" alt="photo du produit">
                                 <div class="card-body ">
@@ -37,7 +37,7 @@
                         <?php foreach($produit_caramels as $key => $produit_caramel){
                         $lien = "?p=produit&id=".$produit_caramel['id'];
                         ?>
-                        <div class="col-md-2 col-lg-12 ">
+                        <div class="col-md-2 col-lg-12">
                             <div class="card" style="width: 18rem;">
                                 <img src="<?php echo $produit_caramel['img_produit'] ?>" class="card-img-top" alt="photo du produit">
                                 <div class="card-body">
