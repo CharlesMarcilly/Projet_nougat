@@ -1,34 +1,11 @@
 <?php 
-// $title = "Inscription";
-
-// if (isset($_POST['ok'])){
-
-//     $nom       = $_POST['nom'];
-//     $prenom    = $_POST['prenom'];
-//     $mail      = $_POST['mail'];
-//     $mdp       = $_POST['password'];
-//     $cmdp      = $_POST['cpassword'];
-//     $adresse   = $_POST['adresse'];
-//     $tel       = $_POST['tel'];
-    
-//     $serverName = "localhost";
-//     $bdd = "nougat";
-//     $userName = "root";
-//     $password = ""; /*Vide sur wamp*/ 
-//     // Récupération de la base de donnée du site 
-//     try {
-//         $db = new PDO("mysql:host=$serverName;dbname=$bdd", $userName, $password);
-//         $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//     } catch (PDOException $e) {
-//         echo "Erreur base de données"; 
-//         echo $e->getMessage();
-//     }}
+$title = "Inscription";
 ?>
 
  
  <?php afficher("header") ?><hr><br>
 
-    <div class="container col-md-6 bg-dark-subtle">
+    <div class="container col-md-6 bg-dark-subtle shadow">
         <h1 class="text-center">Inscription</h1> 
         <form action="" method="post">
             
@@ -39,7 +16,7 @@
                         <input type="text" class="form-control" id="nom"
                         name="nom" aria-describedby="emailHelp" required>    
                     </div>
-                    <div class="form-group my-3"> 
+                    <div class="form-group"> 
                         <label for="mail">E-mail</label> 
                         <input type="mail" class="form-control" id="mail"
                         name="mail" aria-describedby="emailHelp" required>    
@@ -52,7 +29,7 @@
                         <input type="text" class="form-control" id="prenom"
                         name="prenom" aria-describedby="emailHelp" required>    
                     </div>
-                    <div class="form-group my-3"> 
+                    <div class="form-group my-2"> 
                         <label for="tel">Numéro de téléphone</label> 
                         <input type="tel" class="form-control" id="tel"
                         name="tel" aria-describedby="emailHelp" required>   
@@ -62,7 +39,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <div class="form-group my-3"> 
+                    <div class="form-group my-2"> 
                         <label for="adresse">Votre adresse</label> 
                         <input type="text" class="form-control" id="adresse"
                         name="adresse" aria-describedby="emailHelp" required>   
@@ -87,11 +64,11 @@
                 </div>
             </div>
                 <small id="emailHelp" class="form-text text-muted">
-                Assurez-vous d'écrire le même mot de passe.
+                Le mot de passe doit contenir au moins 12 caractères, avec une majuscule, une minuscule, un chiffre et un caractère spécial. 
                 </small> 
                 <br>
                 
-            <button type="submit" class="col-md-8 btn btn-primary my-1" name="ok" style="margin-left: 15%;">
+            <button type="submit" class="col-md-8 btn btn-primary my-2" name="ok" style="margin-left: 15%;">
             S'inscrire !
             </button> 
         </form> 

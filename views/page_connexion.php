@@ -1,14 +1,5 @@
-<?php
-//    $title = "Connexion";
+<?php afficher('header') ?><hr><br>
 
-//    if(isset($_POST['mail']) && $_POST['password'] ){
-
-//          require "../views/page_connexion.php";
-//    }
-        
-?>
-
-    
     <div class="container col-md-6 bg-dark-subtle">
         <h1 class="text-center">Connexion</h1> 
         <form action="" method="post">
@@ -34,4 +25,4 @@
             Se connecter !
             </button> 
         </form>
-    </div>
+    </div><br>
