@@ -17,11 +17,6 @@ $menuheader = [
         "url" => "./?p=categorie"
     ],
     [
-        "text" => "Actualité",
-        "titre" => "L'actualité du moment",
-        "url" => "./?p=actualite"
-    ],
-    [
         "text" => "Recherche",
         "titre" => "Rechercher un produit",
         "url" => "./?p=recherche"
@@ -40,12 +35,17 @@ $menuheader = [
         "text" => "Connexion",
         "titre" => "Se connecter",
         "url" => "./?p=connexion"
+    ],
+    [
+        "text" => "Se déconnecter",
+        "titre" => "Se déconnecter",
+        "url" => "./?p=deconnexion"
+    ],
+    [
+        "text" => "profil",
+        "titre" => "Mon profil",
+        "url" => "./?p=profil"
     ]
-    // [
-    //     "text" => "traitement",
-    //     "titre" => "Traitement",
-    //     "url" => "./?p=traitement"
-    // ]
 ];
 
 

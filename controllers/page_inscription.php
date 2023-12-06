@@ -1,4 +1,9 @@
 <?php 
+// session_start();
+
+if(isset($_SESSION["user"])){
+require "controllers/page_profil.php";
+}
 
 if(isset($_POST['ok'])){
 
@@ -14,11 +19,11 @@ if(isset($_POST['ok'])){
         exit("Le nom et/ou le prénom sont invalides");
     }
 
-    // Protection adresse mail
-    $mail      = $_POST['mail'];
-    $checkEmailQuery = $db->prepare("SELECT COUNT(*) AS count FROM clients WHERE email = :mail");
+    // Compare le Mail récupéré dans $_POST['mail'] aux mails de la base de données
+    $mail               = $_POST['mail'];
+    $checkEmailQuery    = $db->prepare("SELECT COUNT(*) AS count FROM clients WHERE email = :mail");
     $checkEmailQuery->execute([':mail' => $mail]);
-    $resultat = $checkEmailQuery->fetch(PDO::FETCH_ASSOC);
+    $resultat           = $checkEmailQuery->fetch(PDO::FETCH_ASSOC);
 
     if ($resultat['count'] > 0) {
         // L'adresse e-mail existe déjà, vous pouvez afficher un message d'erreur
@@ -31,12 +36,12 @@ if(isset($_POST['ok'])){
     } else 
 
     // On vérifie que les mots de passe sont identique 
-    $mdp             = $_POST['password']; 
-    $cmdp            = $_POST['cpassword'];
+    $mdp   = $_POST['password']; 
+    $cmdp  = $_POST['cpassword'];
     if ($mdp == $cmdp){  
         // On le hashe
         $hashedPassword = password_hash($mdp, PASSWORD_DEFAULT);
-        
+    
     } else {
 
         exit("Les mots de passe ne sont pas identiques.");
@@ -44,7 +49,7 @@ if(isset($_POST['ok'])){
 
     // On vérifie sa longueur
     if (strlen($mdp) < 12) {
-        exit("Le mot de passe doit avoir au moins 13 caractères. <a href'page_inscription.php'>Revenir</a>");
+        exit("Le mot de passe doit avoir au moins 12 caractères. <a href'controllers/page_inscription.php'>Revenir</a>");
 
     } else {
         // Vérification de la présence d'au moins une majuscule
@@ -82,7 +87,7 @@ if(isset($_POST['ok'])){
 
     /* Regex utilisé pour les numéros de téléphones Français (autorise les espaces) */
     $tel       = $_POST['tel'];
-    $pattern = "/^0[1-9](?:\s?\d{2}){4}$/"; 
+    $pattern   = "/^0[1-9](?:\s?\d{2}){4}$/"; 
     if (preg_match($pattern, $tel)) {
         // Le numéro est valide
     } else {
@@ -93,7 +98,6 @@ if(isset($_POST['ok'])){
 //   On dit que si le $_POST['ok'] (du name="ok") existe, on récupère les données en les mettants dans des variables. Ensuite on récupère la 
 //   base de données pour créer une nouvelle requête SQL, qui va insérer les données récupérées dans notre base de données
     $requete = $db -> prepare("INSERT INTO clients (id, nom, prenom, email, mot_de_passe, confirm_mdp, adresse_livraison, telephone, created_at, updated_at) VALUES (0, :nom, :prenom, :mail, :mdp, :cmdp, :adresse, :tel, NOW(), NOW())");
-
     $requete->execute(
         array (
             "nom"       => $nom,
@@ -107,14 +111,23 @@ if(isset($_POST['ok'])){
     );
     $reponse = $requete->fetchALL(PDO::FETCH_ASSOC);
     echo "<span style='color:green;'>Votre inscription est validée !";
+
+    // Récupération de l'id
+    $id = $db->lastInsertId();
     
-    require "controllers/page_connexion.php";
+        // L'utilisateur et le mdp sont correct, on peut donc se connecter et démarrer une SESSION
+                $_SESSION["user"] = [
+                    "id"        => $id,
+                    "nom"       => $_POST['nom'],
+                    "prenom"    => $_POST['prenom'],
+                    "mail"      => $_POST['mail'],
+                    "adresse"   => $_POST['adresse'],
+                    "tel"       => $_POST['tel']
+                ];
 
-} else {
-
+    require  "controllers/page_profil.php";
+    } else {
     require "views/page_inscription.php";
-}
-
-       
+    }
 
 ?>

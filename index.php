@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "core/tools.php";
 require "core/db.php"; /** METTRE IMPERATIVEMENT AVANT ROOTER.PHP. IL FAUT QUE LA BASE DE DONNEE SOIT ACCESSIBLE AVANT DACCEDER AUX VIEWS */
 require "core/rooter.php";

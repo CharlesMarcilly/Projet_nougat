@@ -1,6 +1,6 @@
 <?php afficher('header') ?><hr><br>
 
-    <div class="container col-md-6 bg-dark-subtle">
+    <div class="container col-md-6 bg-dark-subtle shadow">
         <h1 class="text-center">Connexion</h1> 
         <form action="" method="post">
             
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                 </div><br>  
-            <button type="submit" class="col-md-8 btn btn-primary my-1" name="connexion">
+            <button type="submit" class="col-md-6 btn btn-primary my-1" name="connexion">
             Se connecter !
             </button> 
         </form>

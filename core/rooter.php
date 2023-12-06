@@ -31,9 +31,6 @@ switch ($p) {
     case "produit":
         require "controllers/page_produits.php";
     break;
-    case "actualite":
-        require "controllers/page_actualites.php";
-    break;
     case "categorie":
         require "controllers/page_categories.php";
     break;
@@ -48,6 +45,12 @@ switch ($p) {
     break;
     case "connexion":
         require "controllers/page_connexion.php";
+    break;
+    case "deconnexion":
+        require "controllers/page_deconnexion.php";
+    break;
+    case "profil":
+        require "controllers/page_profil.php";
     break;
     default:
         require "controllers/page_404.php";

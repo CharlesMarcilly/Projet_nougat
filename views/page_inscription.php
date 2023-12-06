@@ -46,9 +46,9 @@ $title = "Inscription";
                     </div>
             </div>
 
-            <div class="row">
+            
                 <div class="col-md-6">
-                    <div class="form-group my-2 "> 
+                    <div class="form-group my-2 px-0 "> 
                         <label for="password">Mot de passe</label> 
                         <input type="password" class="form-control" id="password"
                         name="password" aria-describedby="emailHelp" required>    
@@ -56,7 +56,7 @@ $title = "Inscription";
                 </div>
 
                 <div class="col-md-6">
-                    <div class="form-group my-2 "> 
+                    <div class="form-group my-2"> 
                         <label for="cpassword">Confirmation du mot de passe</label> 
                         <input type="password" class="form-control" id="cpassword"
                         name="cpassword" aria-describedby="emailHelp"required>    
@@ -68,7 +68,7 @@ $title = "Inscription";
                 </small> 
                 <br>
                 
-            <button type="submit" class="col-md-8 btn btn-primary my-2" name="ok" style="margin-left: 15%;">
+            <button type="submit" class="col-md-8 btn btn-primary my-2" name="ok">
             S'inscrire !
             </button> 
         </form> 
